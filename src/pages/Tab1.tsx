@@ -46,7 +46,7 @@ const[isUpdateOpen , setisUpdateOpen ]= useState(false);
 
 useEffect(()=>{
   getdata();
-    },[retrive,isUpdateOpen]);
+    },[retrive,isUpdateOpen,data,isbtn]);
 
 //Formik to read,validate and store data to API
     const myFormik = useFormik({
