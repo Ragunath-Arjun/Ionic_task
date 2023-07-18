@@ -28,7 +28,7 @@ function Example() {
 const [data,setdata]=useState([]);
 const [isOpen, setIsOpen] = useState(false);
 const [isbtn,setbtn]=useState(false);
-const[retrive,setretrive]=useState({
+const[retrive,setretrive]: any=useState({
   productname: "",
   price: "",
   oldprice: "",
@@ -141,7 +141,7 @@ setretrive(update.data);
 console.log(retrive);
   }
 
-  const updatedata=async(e)=>{
+  const updatedata=async(e: any)=>{
     e.preventDefault()
     console.log(retrive,"retrivessss")
     let update = await axios.put(`https://64b573c2f3dbab5a95c757c4.mockapi.io/api/product/product/${retrive.id}`,retrive);
@@ -153,7 +153,7 @@ console.log(retrive);
     }
   }
 
-  const handleDelete= async(id) =>{
+  const handleDelete= async(id: number) =>{
    let confirm = window.confirm("Are you sure you want to delete")
    
    if(confirm){
@@ -162,9 +162,9 @@ console.log(retrive);
 getdata();
   }
 
-  const updatehandlechange = (e) =>{
+  const updatehandlechange = (e:any) =>{
 const{name,value}=e.target;
-setretrive(set=>({...set,[name]:value}))
+setretrive((set:any)=>({...set,[name]:value}))
 
   }
   return (
@@ -255,7 +255,7 @@ setretrive(set=>({...set,[name]:value}))
 
   
   <tbody>
-  {data.map((ele,index)=>{
+  {data.map((ele:any,index)=>{
         return ( <>
         <tr>
       <th scope="row">{index}</th>
