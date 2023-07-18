@@ -326,7 +326,7 @@ setretrive((set:any)=>({...set,[name]:value}))
             <IonItem>
               <IonTextarea label="Description" placeholder="Your description" name="description" value={retrive?retrive.description:""} onIonChange={updatehandlechange} required />
             </IonItem>
-<IonButton disabled={isbtn} type="submit" expand='block' >{isbtn ? "Updating..." : "Update"}</IonButton>        
+            <IonButton disabled={isbtn} type="submit" expand='block' >{isbtn ? "Updating..." : "Update"}</IonButton>        
           </form>
         </IonModal>
     </IonPage>
